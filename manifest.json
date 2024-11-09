@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Everything bar",
+    "version": "1.0",
+    "description": "A custom searchable tab button for Firefox.",
+    "permissions": ["tabs", "sessions", "history", "storage"],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "e1c63f75-bea6-4499-9fb2-29b54539c301@example.com"
+        }
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
+    },
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+E",
+          "mac": "Command+Shift+E"
+        },
+        "description": "Open Tab Search Popup"
+      }
+    }
+  }
+  
