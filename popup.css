@@ -1,7 +1,40 @@
 
 body {
     font-family: Arial, sans-serif;
-    width: 250px;
+    max-width: 250px;
+    overflow-x: hidden; /* Prevents horizontal scroll on the entire body */
+    margin: 0;
+    padding: 0;
+  }
+  body, #tabsList, #closedTabsList {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Flex container for list items to prevent content cutoff */
+  .tab-item, .closed-tab-item, .history-item, .online-result {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  .tab-item, .closed-tab-item, .history-item, .online-result {
+    padding: 8px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text wrapping, if needed */
+    overflow: hidden; /* Cuts off overflow text */
+    text-overflow: ellipsis; /* Adds "..." to overflowing text */
+    box-sizing: border-box; /* Includes padding in width */
+    width: 100%; /* Ensures items take the full container width */
   }
   
   #searchInput {
@@ -39,10 +72,24 @@ body {
     padding: 0;            /* Removes default padding */
     margin: 0;             /* Removes default margin */
   }
-  
+  .section-heading {
+    font-weight: bold;
+    padding: 8px 0;
+    color: #4CAF50; /* Green color for the headings */
+  }
   .tab-item, .closed-tab-item {
     padding: 8px;
     cursor: pointer;
+  }
+  .tab-item {
+    position: relative;
+    padding-right: 20px; /* Adjust padding to fit the icon */
+  }
+  
+  .audio-icon {
+    color: green; /* Set color for visibility */
+    font-size: 0.9em; /* Adjust size if needed */
+    margin-left: 5px; /* Space between title and icon */
   }
   
   .tab-item.selected, .closed-tab-item.selected {
