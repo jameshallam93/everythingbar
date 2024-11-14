@@ -2,6 +2,8 @@
 
 A one stop shop to searching for that one tab you know you had open at one point.
 
+Firefox extension link: https://addons.mozilla.org/en-GB/firefox/addon/everything-bar/
+
 An improvement over the list all tabs button that Firefox provides - Press Cmd+Shift+E (mac) or Cntrl+Shift+E (windows) to:
 - Show tabs and recently closed tabs by default, in chronological order based on when you last viewed them.
 - Tabs are all searchable, and the search bar is highlighted by default.
@@ -29,4 +31,5 @@ TODOs/roadmap:
 - Add option to close tab(s) from the extension menu.
 - Make more things configurable (option to use history/search engine, length of time for 'recently' closed tabs, etc).
 - Clear duplicates button.
+
 
